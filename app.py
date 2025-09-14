@@ -1,53 +1,30 @@
 import streamlit as st
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import linear_kernel
 
 # Load dataset
 df = pd.read_csv("products.csv")
-df["image"] = df["image"].str.strip()  
 
-st.write("Sample images from CSV:")
-st.write(df["image"].head())
+st.set_page_config(page_title="E-Commerce Recommender", layout="wide")
 
-# Content for recommendation (combine name + brand + description)
-df["content"] = df["name"] + " " + df["brand"] + " " + df["description"]
+st.title("🛒 E-Commerce Recommender System")
+st.write("Browse products and see recommendations!")
 
-# TF-IDF Vectorizer
-vectorizer = TfidfVectorizer(stop_words="english")
-tfidf_matrix = vectorizer.fit_transform(df["content"])
-cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+# Sidebar for search
+search_query = st.sidebar.text_input("Search a product")
 
-# Recommendation function
-def recommend(product_name, num_recommendations=5):
-    if product_name not in df["name"].values:
-        return []
-    idx = df[df["name"] == product_name].index[0]
-    sim_scores = list(enumerate(cosine_sim[idx]))
-    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-    sim_scores = sim_scores[1:num_recommendations+1]
-    product_indices = [i[0] for i in sim_scores]
-    return df.iloc[product_indices]
+# Filter based on search
+if search_query:
+    filtered = df[df['product_name'].str.contains(search_query, case=False, na=False)]
+else:
+    filtered = df
 
-# Streamlit UI
-st.title("🛒 Product Recommender System")
-
-# Dropdown for product selection
-product_choice = st.selectbox("Select a product:", df["name"].values)
-
-if st.button("Show Recommendations"):
-    recommendations = recommend(product_choice)
-    if recommendations.empty:
-        st.warning("No recommendations found!")
-    else:
-        st.subheader("Recommended Products:")
-        for _, row in recommendations.iterrows():
-            st.image(row["image"], width=150)
-            st.markdown(f"**{row['name']}**")
-            st.write(f"Brand: {row['brand']}")
-            st.write(f"Price: ₹{row['price']}")
-            st.write(f"{row['description']}")
-            st.markdown("---")
-
-
-
+# Show results in card layout
+cols = st.columns(3)  # 3 products per row
+for idx, row in filtered.iterrows():
+    with cols[idx % 3]:
+        st.image(row['image'], width=200)
+        st.markdown(f"**{row['product_name']}**")
+        st.write(f"Brand: {row['brand']}")
+        st.write(f"💰 Price: ₹{row['price']}")
+        if st.button("Recommend Similar", key=row['product_id']):
+            st.success(f"Recommended products similar to {row['product_name']}")
