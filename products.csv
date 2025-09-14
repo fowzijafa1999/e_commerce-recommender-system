@@ -1,34 +1,31 @@
-name,brand,price,image,description
-Running Shoes,Nike,4999,https://share.google/images/v6mRlMvpMGfliSfFC,Comfortable lightweight running shoes
-Smartphone,Samsung,19999,https://via.placeholder.com/150,Latest model with 5G and AMOLED display
-Laptop,Dell,59999,https://via.placeholder.com/150,Powerful laptop for work and gaming
-Headphones,Boat,1999,https://via.placeholder.com/150,Wireless headphones with deep bass
-Backpack,Wildcraft,1499,https://via.placeholder.com/150,Durable and waterproof backpack
-Smartwatch,Apple,29999,https://via.placeholder.com/150,Premium smartwatch with fitness tracking
-Bluetooth Speaker,JBL,3999,https://via.placeholder.com/150,Portable speaker with powerful sound
-T-shirt,Puma,999,https://via.placeholder.com/150,Cotton t-shirt with stylish design
-Refrigerator,LG,44999,https://via.placeholder.com/150,Double door fridge with fast cooling
-Washing Machine,Whirlpool,34999,https://via.placeholder.com/150,Fully automatic washing machine
-Microwave Oven,IFB,12999,https://via.placeholder.com/150,Convection microwave with grill option
-Digital Camera,Canon,54999,https://via.placeholder.com/150,DSLR camera with 24MP lens
-Television,Sony,69999,https://via.placeholder.com/150,Smart TV with 4K resolution
-Gaming Console,Sony,39999,https://via.placeholder.com/150,Next-gen gaming console
-Power Bank,Mi,1499,https://via.placeholder.com/150,10000mAh fast charging power bank
-Air Conditioner,Voltas,30999,https://via.placeholder.com/150,1.5 ton split AC with inverter
-Tablet,Lenovo,25999,https://via.placeholder.com/150,10-inch tablet with stylus support
-Shoes,Adidas,3499,https://via.placeholder.com/150,Stylish and durable sports shoes
-Jeans,Levis,2499,https://via.placeholder.com/150,Slim fit stretchable jeans
-Jacket,North Face,5999,https://via.placeholder.com/150,Winter jacket with insulation
-Coffee Maker,Philips,4999,https://via.placeholder.com/150,Automatic coffee brewing machine
-Mixer Grinder,Prestige,2999,https://via.placeholder.com/150,3-jar multipurpose mixer
-Vacuum Cleaner,Eureka Forbes,6999,https://via.placeholder.com/150,Handheld vacuum cleaner
-Airpods,Apple,17999,https://via.placeholder.com/150,Wireless earbuds with noise cancellation
-Water Bottle,Milton,599,https://via.placeholder.com/150,Insulated steel water bottle
-Sunglasses,RayBan,7999,https://via.placeholder.com/150,UV protected stylish sunglasses
-Watch,Fossil,12999,https://via.placeholder.com/150,Analog wristwatch with leather strap
-Fan,Havells,2999,https://via.placeholder.com/150,High speed ceiling fan
-Helmet,Studds,1999,https://via.placeholder.com/150,ISI certified bike helmet
-Printer,HP,8999,https://via.placeholder.com/150,Wireless color inkjet printer
-
-
-
+product_id,product_name,brand,price,image
+1,Nike Running Shoes,Nike,2999,https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg
+2,Dell Inspiron Laptop,Dell,55000,https://images.pexels.com/photos/18105/pexels-photo.jpg
+3,Samsung Galaxy Smartphone,Samsung,22000,https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg
+4,Sony Wireless Headphones,Sony,4500,https://images.pexels.com/photos/159299/headphones-music-listen-earphones-159299.jpeg
+5,Wildcraft Backpack,Wildcraft,1499,https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg
+6,Fossil Analog Watch,Fossil,7999,https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg
+7,Apple MacBook Air,Apple,89000,https://images.pexels.com/photos/18105/pexels-photo.jpg
+8,Adidas Sneakers,Adidas,3999,https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg
+9,Canon DSLR Camera,Canon,42000,https://images.pexels.com/photos/51383/camera-slr-digital-photography-51383.jpeg
+10,JBL Bluetooth Speaker,JBL,3200,https://images.pexels.com/photos/339465/pexels-photo-339465.jpeg
+11,HP Pavilion Laptop,HP,48000,https://images.pexels.com/photos/18105/pexels-photo.jpg
+12,Puma Sports Shoes,Puma,2899,https://images.pexels.com/photos/267202/pexels-photo-267202.jpeg
+13,Lenovo ThinkPad,Lenovo,60000,https://images.pexels.com/photos/18105/pexels-photo.jpg
+14,Apple iPhone 13,Apple,72000,https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg
+15,Bose Noise Cancelling Headphones,Bose,15999,https://images.pexels.com/photos/159299/headphones-music-listen-earphones-159299.jpeg
+16,American Tourister Suitcase,American Tourister,5999,https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg
+17,Casio Digital Watch,Casio,2999,https://images.pexels.com/photos/277394/pexels-photo-277394.jpeg
+18,Asus Gaming Laptop,Asus,75000,https://images.pexels.com/photos/18105/pexels-photo.jpg
+19,Oppo F19 Smartphone,Oppo,18000,https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg
+20,Redmi Note 11,Redmi,15000,https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg
+21,Samsung Smartwatch,Samsung,9999,https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg
+22,Logitech Wireless Mouse,Logitech,999,https://images.pexels.com/photos/204611/pexels-photo-204611.jpeg
+23,Apple iPad Pro,Apple,85000,https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg
+24,Herschel Backpack,Herschel,3999,https://images.pexels.com/photos/374750/pexels-photo-374750.jpeg
+25,Nike Sports T-Shirt,Nike,1499,https://images.pexels.com/photos/999267/pexels-photo-999267.jpeg
+26,Ray-Ban Sunglasses,Ray-Ban,5999,https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg
+27,Apple AirPods Pro,Apple,19999,https://images.pexels.com/photos/159299/headphones-music-listen-earphones-159299.jpeg
+28,Fitbit Fitness Band,Fitbit,6999,https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg
+29,Boat Bluetooth Earbuds,Boat,2999,https://images.pexels.com/photos/159299/headphones-music-listen-earphones-159299.jpeg
+30,Samsung 4K Smart TV,Samsung,55000,https://images.pexels.com/photos/572139/pexels-photo-572139.jpeg
