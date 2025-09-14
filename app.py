@@ -9,7 +9,6 @@ df["image"] = df["image"].str.strip()
 
 st.write("Sample images from CSV:")
 st.write(df["image"].head())
-st.image("https://via.placeholder.com/150", width=150, caption="Test Image")
 
 # Content for recommendation (combine name + brand + description)
 df["content"] = df["name"] + " " + df["brand"] + " " + df["description"]
@@ -49,5 +48,6 @@ if st.button("Show Recommendations"):
             st.write(f"Price: ₹{row['price']}")
             st.write(f"{row['description']}")
             st.markdown("---")
+
 
 
