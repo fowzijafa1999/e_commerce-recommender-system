@@ -1,39 +1,39 @@
 import streamlit as st
 import pandas as pd
+from recommender import SimpleRecommender
 
-# Load dataset
-df = pd.read_csv("products.csv")
+st.set_page_config(page_title="🛍 Product Recommender", layout="wide")
+st.title("🛒 Product Recommendation System")
 
-# Page settings
-st.set_page_config(page_title="🛒 E-Commerce Recommender", layout="wide")
+# Load data
+rec = SimpleRecommender("products.csv")
+df = rec.df
 
-st.title("🛒 E-Commerce Recommender System")
-st.write("Explore products, check details, and see recommendations!")
+# Sidebar options
+st.sidebar.header("Options")
+product_id = st.sidebar.selectbox(
+    "Select a product",
+    df['product_id'],
+    format_func=lambda x: df[df['product_id'] == x]['name'].values[0]
+)
+top_n = st.sidebar.slider("Number of recommendations", 1, 8, 4)
 
-# Sidebar filters
-st.sidebar.header("🔍 Search & Filters")
-search_query = st.sidebar.text_input("Search for a product")
-max_price = st.sidebar.slider("Filter by price", int(df['price'].min()), int(df['price'].max()), int(df['price'].max()))
-brand_filter = st.sidebar.multiselect("Filter by brand", options=df['brand'].unique())
+# Display selected product
+selected = df[df['product_id'] == product_id].iloc[0]
+st.markdown(f"### 🎯 {selected['name']}")
+st.image(selected['image_url'], width=250)
+st.write(f"**Price:** ₹{selected['price_inr']}")
+st.write(selected['description'])
 
-# Apply filters
-filtered = df.copy()
-if search_query:
-    filtered = filtered[filtered['product_name'].str.contains(search_query, case=False, na=False)]
-if brand_filter:
-    filtered = filtered[filtered['brand'].isin(brand_filter)]
-filtered = filtered[filtered['price'] <= max_price]
-
-# Show results
-if filtered.empty:
-    st.warning("No products found. Try different filters.")
-else:
-    cols = st.columns(3)  # 3 products per row
-    for idx, row in filtered.iterrows():
-        with cols[idx % 3]:
-            st.image(row['image'], width=200)
-            st.markdown(f"**{row['product_name']}**")
-            st.write(f"Brand: `{row['brand']}`")
-            st.write(f"💰 Price: ₹{row['price']}")
-            if st.button(f"Recommend Similar to {row['product_id']}", key=row['product_id']):
-                st.success(f"Recommended products similar to {row['product_name']} will appear here!")
+# Show recommendations
+if st.button("🔍 Show Recommendations"):
+    recs = rec.recommend_by_id(product_id, top_n=top_n)
+    st.markdown("## Recommended Products")
+    cols = st.columns(2)
+    for i, row in recs.iterrows():
+        with cols[i % 2]:
+            st.image(row['image_url'], width=180)
+            st.markdown(f"**{row['name']}**")
+            st.write(f"₹{row['price_inr']}")
+            st.write(row['description'])
+            st.markdown("---")
