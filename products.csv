@@ -1,64 +1,41 @@
-import pandas as pd
-
-products = [
-    # Electronics
-    (1, "Smartphone Pro X", "6.7-inch OLED display, 128GB storage, 12GB RAM.", 59999, 4.5, "https://images.pexels.com/photos/6078121/pexels-photo.jpg"),
-    (2, "Laptop UltraBook", "Lightweight laptop with 16GB RAM and 512GB SSD.", 74999, 4.7, "https://images.pexels.com/photos/18105/pexels-photo.jpg"),
-    (3, "Wireless Earbuds Max", "Noise-cancelling earbuds with 24hr battery.", 7999, 4.3, "https://images.pexels.com/photos/3394651/pexels-photo.jpg"),
-    (4, "Smartwatch Fit", "Fitness smartwatch with heart-rate and GPS.", 5999, 4.2, "https://images.pexels.com/photos/277406/pexels-photo.jpg"),
-    (5, "Tablet Go", "10.5-inch tablet with stylus support.", 18999, 4.1, "https://images.pexels.com/photos/5082575/pexels-photo.jpg"),
-
-    # Home & Kitchen
-    (6, "Microwave Oven", "900W microwave oven with grill function.", 8499, 4.0, "https://images.pexels.com/photos/3952232/pexels-photo.jpg"),
-    (7, "Blender Pro", "High-speed blender for smoothies and juices.", 2999, 4.4, "https://images.pexels.com/photos/414837/pexels-photo.jpg"),
-    (8, "Refrigerator CoolMax", "Double-door fridge with inverter compressor.", 35999, 4.6, "https://images.pexels.com/photos/373790/pexels-photo.jpg"),
-    (9, "Coffee Maker", "Automatic coffee machine with frother.", 5999, 4.3, "https://images.pexels.com/photos/302899/pexels-photo.jpg"),
-    (10, "Vacuum Cleaner", "Bagless vacuum cleaner with HEPA filter.", 6999, 4.1, "https://images.pexels.com/photos/3637729/pexels-photo.jpg"),
-
-    # Fashion
-    (11, "Denim Jeans", "Slim fit stretchable blue jeans.", 1999, 4.0, "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg"),
-    (12, "Leather Jacket", "Classic black biker leather jacket.", 5499, 4.5, "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg"),
-    (13, "Cotton Hoodie", "Soft cotton hoodie with kangaroo pocket.", 1499, 4.2, "https://images.pexels.com/photos/100741/pexels-photo.jpg"),
-    (14, "Sneakers White", "Casual white sneakers with rubber sole.", 2999, 4.3, "https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg"),
-    (15, "Wrist Watch", "Analog watch with leather strap.", 2599, 4.1, "https://images.pexels.com/photos/190819/pexels-photo.jpg"),
-
-    # Sports & Outdoor
-    (16, "Cricket Bat", "English willow professional cricket bat.", 4999, 4.6, "https://images.pexels.com/photos/3991872/pexels-photo.jpg"),
-    (17, "Football", "FIFA size-5 professional football.", 1499, 4.4, "https://images.pexels.com/photos/274422/pexels-photo.jpg"),
-    (18, "Yoga Mat", "Non-slip yoga mat with 6mm thickness.", 999, 4.2, "https://images.pexels.com/photos/3823039/pexels-photo.jpg"),
-    (19, "Tennis Racket", "Lightweight racket for beginners & pros.", 3499, 4.3, "https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg"),
-    (20, "Badminton Shuttle Pack", "Pack of 12 nylon shuttles.", 499, 4.0, "https://images.pexels.com/photos/365385/pexels-photo.jpg"),
-
-    # Beauty & Personal Care
-    (21, "Perfume Elegant", "Long-lasting floral fragrance.", 1599, 4.5, "https://images.pexels.com/photos/965989/pexels-photo.jpg"),
-    (22, "Herbal Shampoo", "Natural ingredients for strong hair.", 399, 4.1, "https://images.pexels.com/photos/3735631/pexels-photo.jpg"),
-    (23, "Face Cream", "Moisturizing daily use cream.", 599, 4.2, "https://images.pexels.com/photos/3735632/pexels-photo.jpg"),
-    (24, "Lipstick Matte", "Matte finish lipstick, 5 shades.", 699, 4.0, "https://images.pexels.com/photos/2533266/pexels-photo.jpg"),
-    (25, "Hair Dryer", "1200W hair dryer with 2 speed settings.", 1299, 4.3, "https://images.pexels.com/photos/1620754/pexels-photo.jpg"),
-
-    # Books
-    (26, "Novel - The Journey", "Bestselling contemporary fiction novel.", 499, 4.4, "https://images.pexels.com/photos/46274/pexels-photo.jpg"),
-    (27, "Science Basics", "Introductory guide to modern science.", 799, 4.1, "https://images.pexels.com/photos/256559/pexels-photo.jpg"),
-    (28, "History of India", "Comprehensive history reference book.", 999, 4.3, "https://images.pexels.com/photos/256541/pexels-photo.jpg"),
-    (29, "Cooking Made Easy", "Over 200 easy-to-follow recipes.", 699, 4.2, "https://images.pexels.com/photos/1415555/pexels-photo.jpg"),
-    (30, "Kids Storybook", "Illustrated storybook for children.", 399, 4.5, "https://images.pexels.com/photos/256546/pexels-photo.jpg"),
-
-    # Toys
-    (31, "LEGO Building Set", "Creative bricks set with 500 pieces.", 3499, 4.8, "https://images.pexels.com/photos/163125/pexels-photo.jpg"),
-    (32, "Remote Car", "Rechargeable remote-controlled car.", 1999, 4.3, "https://images.pexels.com/photos/19090/pexels-photo.jpg"),
-    (33, "Doll Playset", "Fashion doll with accessories.", 899, 4.1, "https://images.pexels.com/photos/36029/pexels-photo.jpg"),
-    (34, "Puzzle Game", "1000-piece jigsaw puzzle.", 599, 4.2, "https://images.pexels.com/photos/226383/pexels-photo.jpg"),
-    (35, "Toy Train", "Electric toy train with tracks.", 1499, 4.0, "https://images.pexels.com/photos/258191/pexels-photo.jpg"),
-
-    # Miscellaneous
-    (36, "Backpack 30L", "Durable backpack with laptop compartment.", 1999, 4.4, "https://images.pexels.com/photos/414444/pexels-photo.jpg"),
-    (37, "Handbag Classic", "Elegant leather handbag.", 2499, 4.5, "https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg"),
-    (38, "Sunglasses UV400", "Stylish sunglasses with UV protection.", 1299, 4.2, "https://images.pexels.com/photos/46710/pexels-photo.jpg"),
-    (39, "Leather Belt", "Premium leather belt with buckle.", 899, 4.0, "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg"),
-    (40, "Travel Mug", "Insulated stainless steel travel mug.", 699, 4.3, "https://images.pexels.com/photos/3727306/pexels-photo.jpg"),
-]
-
-df = pd.DataFrame(products, columns=["product_id","name","description","price_inr","rating","image_url"])
-df.to_csv("products.csv", index=False)
-print("✅ Saved products.csv with", len(df), "products")
-df.head()
+product_id,name,description,price_inr,image_url
+1,Smartphone Pro X,"6.7-inch OLED display, 128GB storage, fast processor, high-res camera",59999,https://images.pexels.com/photos/6078121/pexels-photo.jpg
+2,Laptop UltraBook,"Lightweight laptop, 16GB RAM, 512GB SSD, long battery life",74999,https://images.pexels.com/photos/18105/pexels-photo.jpg
+3,Wireless Earbuds Max,"Noise-cancelling earbuds, 24hr battery, Bluetooth 5.0",7999,https://images.pexels.com/photos/3394651/pexels-photo.jpg
+4,Smartwatch Fit,"Fitness smartwatch, heart-rate monitor, GPS tracking",5999,https://images.pexels.com/photos/277406/pexels-photo.jpg
+5,Tablet Go,"10.5-inch tablet, stylus support, lightweight design",18999,https://images.pexels.com/photos/5082575/pexels-photo.jpg
+6,Microwave Oven,"900W microwave with grill, easy-to-clean interior",8499,https://images.pexels.com/photos/3952232/pexels-photo.jpg
+7,Blender Pro,"High-speed blender for smoothies, juices, and soups",2999,https://images.pexels.com/photos/414837/pexels-photo.jpg
+8,Refrigerator CoolMax,"Double-door fridge, inverter compressor, large storage",35999,https://images.pexels.com/photos/373790/pexels-photo.jpg
+9,Coffee Maker,"Automatic coffee machine with milk frother",5999,https://images.pexels.com/photos/302899/pexels-photo.jpg
+10,Vacuum Cleaner,"Bagless vacuum, HEPA filter, lightweight",6999,https://images.pexels.com/photos/3637729/pexels-photo.jpg
+11,Denim Jeans,"Slim fit blue denim jeans, stretchable fabric",1999,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
+12,Leather Jacket,"Black biker leather jacket, stylish and warm",5499,https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg
+13,Cotton Hoodie,"Soft cotton hoodie, kangaroo pocket, casual wear",1499,https://images.pexels.com/photos/100741/pexels-photo.jpg
+14,Sneakers White,"Casual white sneakers, rubber sole, lightweight",2999,https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg
+15,Wrist Watch,"Analog watch with leather strap, classic design",2599,https://images.pexels.com/photos/190819/pexels-photo.jpg
+16,Cricket Bat,"English willow bat, professional grade, lightweight",4999,https://images.pexels.com/photos/3991872/pexels-photo.jpg
+17,Football,"FIFA size-5, durable synthetic material, professional",1499,https://images.pexels.com/photos/274422/pexels-photo.jpg
+18,Yoga Mat,"Non-slip mat, 6mm thick, ideal for home or gym",999,https://images.pexels.com/photos/3823039/pexels-photo.jpg
+19,Tennis Racket,"Lightweight racket for beginners and pros, durable",3499,https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg
+20,Badminton Shuttle Pack,"Pack of 12 nylon shuttles, standard speed",499,https://images.pexels.com/photos/365385/pexels-photo.jpg
+21,Perfume Elegant,"Long-lasting floral fragrance, ideal for day/night",1599,https://images.pexels.com/photos/965989/pexels-photo.jpg
+22,Herbal Shampoo,"Natural ingredients, strengthens hair, daily use",399,https://images.pexels.com/photos/3735631/pexels-photo.jpg
+23,Face Cream,"Moisturizing daily cream, lightweight, suitable for all skin",599,https://images.pexels.com/photos/3735632/pexels-photo.jpg
+24,Lipstick Matte,"Matte finish, 5 vibrant shades, smooth application",699,https://images.pexels.com/photos/2533266/pexels-photo.jpg
+25,Hair Dryer,"1200W hair dryer, 2 speed settings, compact design",1299,https://images.pexels.com/photos/1620754/pexels-photo.jpg
+26,Novel - The Journey,"Bestselling contemporary fiction, 300 pages",499,https://images.pexels.com/photos/46274/pexels-photo.jpg
+27,Science Basics,"Introductory guide to modern science, illustrated",799,https://images.pexels.com/photos/256559/pexels-photo.jpg
+28,History of India,"Comprehensive history, maps, and illustrations",999,https://images.pexels.com/photos/256541/pexels-photo.jpg
+29,Cooking Made Easy,"200+ simple recipes for home cooking",699,https://images.pexels.com/photos/1415555/pexels-photo.jpg
+30,Kids Storybook,"Illustrated storybook for children aged 5-10",399,https://images.pexels.com/photos/256546/pexels-photo.jpg
+31,LEGO Building Set,"500-piece creative bricks, build models & shapes",3499,https://images.pexels.com/photos/163125/pexels-photo.jpg
+32,Remote Car,"Rechargeable RC car, 20km/h top speed",1999,https://images.pexels.com/photos/19090/pexels-photo.jpg
+33,Doll Playset,"Fashion doll with accessories, fun for kids",899,https://images.pexels.com/photos/36029/pexels-photo.jpg
+34,Puzzle Game,"1000-piece jigsaw puzzle, family game",599,https://images.pexels.com/photos/226383/pexels-photo.jpg
+35,Toy Train,"Electric toy train with track, battery operated",1499,https://images.pexels.com/photos/258191/pexels-photo.jpg
+36,Backpack 30L,"Durable backpack, laptop compartment, multiple pockets",1999,https://images.pexels.com/photos/414444/pexels-photo.jpg
+37,Handbag Classic,"Elegant leather handbag, medium size, formal & casual",2499,https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg
+38,Sunglasses UV400,"Stylish sunglasses, 100% UV protection",1299,https://images.pexels.com/photos/46710/pexels-photo.jpg
+39,Leather Belt,"Premium leather, adjustable buckle, classic design",899,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
+40,Travel Mug,"Stainless steel insulated mug, keeps drinks hot/cold",699,https://images.pexels.com/photos/3727306/pexels-photo.jpg
