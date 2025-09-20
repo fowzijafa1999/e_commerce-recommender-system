@@ -1,41 +1,251 @@
-product_id,name,description,price_inr,image_url
-1,Smartphone Pro X,"6.7-inch OLED display, 128GB storage, fast processor, high-res camera",59999,https://images.pexels.com/photos/6078121/pexels-photo.jpg
-2,Laptop UltraBook,"Lightweight laptop, 16GB RAM, 512GB SSD, long battery life",74999,https://images.pexels.com/photos/18105/pexels-photo.jpg
-3,Wireless Earbuds Max,"Noise-cancelling earbuds, 24hr battery, Bluetooth 5.0",7999,https://images.pexels.com/photos/3394651/pexels-photo.jpg
-4,Smartwatch Fit,"Fitness smartwatch, heart-rate monitor, GPS tracking",5999,https://images.pexels.com/photos/277406/pexels-photo.jpg
-5,Tablet Go,"10.5-inch tablet, stylus support, lightweight design",18999,https://images.pexels.com/photos/5082575/pexels-photo.jpg
-6,Microwave Oven,"900W microwave with grill, easy-to-clean interior",8499,https://images.pexels.com/photos/3952232/pexels-photo.jpg
-7,Blender Pro,"High-speed blender for smoothies, juices, and soups",2999,https://images.pexels.com/photos/414837/pexels-photo.jpg
-8,Refrigerator CoolMax,"Double-door fridge, inverter compressor, large storage",35999,https://images.pexels.com/photos/373790/pexels-photo.jpg
-9,Coffee Maker,"Automatic coffee machine with milk frother",5999,https://images.pexels.com/photos/302899/pexels-photo.jpg
-10,Vacuum Cleaner,"Bagless vacuum, HEPA filter, lightweight",6999,https://images.pexels.com/photos/3637729/pexels-photo.jpg
-11,Denim Jeans,"Slim fit blue denim jeans, stretchable fabric",1999,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
-12,Leather Jacket,"Black biker leather jacket, stylish and warm",5499,https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg
-13,Cotton Hoodie,"Soft cotton hoodie, kangaroo pocket, casual wear",1499,https://images.pexels.com/photos/100741/pexels-photo.jpg
-14,Sneakers White,"Casual white sneakers, rubber sole, lightweight",2999,https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg
-15,Wrist Watch,"Analog watch with leather strap, classic design",2599,https://images.pexels.com/photos/190819/pexels-photo.jpg
-16,Cricket Bat,"English willow bat, professional grade, lightweight",4999,https://images.pexels.com/photos/3991872/pexels-photo.jpg
-17,Football,"FIFA size-5, durable synthetic material, professional",1499,https://images.pexels.com/photos/274422/pexels-photo.jpg
-18,Yoga Mat,"Non-slip mat, 6mm thick, ideal for home or gym",999,https://images.pexels.com/photos/3823039/pexels-photo.jpg
-19,Tennis Racket,"Lightweight racket for beginners and pros, durable",3499,https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg
-20,Badminton Shuttle Pack,"Pack of 12 nylon shuttles, standard speed",499,https://images.pexels.com/photos/365385/pexels-photo.jpg
-21,Perfume Elegant,"Long-lasting floral fragrance, ideal for day/night",1599,https://images.pexels.com/photos/965989/pexels-photo.jpg
-22,Herbal Shampoo,"Natural ingredients, strengthens hair, daily use",399,https://images.pexels.com/photos/3735631/pexels-photo.jpg
-23,Face Cream,"Moisturizing daily cream, lightweight, suitable for all skin",599,https://images.pexels.com/photos/3735632/pexels-photo.jpg
-24,Lipstick Matte,"Matte finish, 5 vibrant shades, smooth application",699,https://images.pexels.com/photos/2533266/pexels-photo.jpg
-25,Hair Dryer,"1200W hair dryer, 2 speed settings, compact design",1299,https://images.pexels.com/photos/1620754/pexels-photo.jpg
-26,Novel - The Journey,"Bestselling contemporary fiction, 300 pages",499,https://images.pexels.com/photos/46274/pexels-photo.jpg
-27,Science Basics,"Introductory guide to modern science, illustrated",799,https://images.pexels.com/photos/256559/pexels-photo.jpg
-28,History of India,"Comprehensive history, maps, and illustrations",999,https://images.pexels.com/photos/256541/pexels-photo.jpg
-29,Cooking Made Easy,"200+ simple recipes for home cooking",699,https://images.pexels.com/photos/1415555/pexels-photo.jpg
-30,Kids Storybook,"Illustrated storybook for children aged 5-10",399,https://images.pexels.com/photos/256546/pexels-photo.jpg
-31,LEGO Building Set,"500-piece creative bricks, build models & shapes",3499,https://images.pexels.com/photos/163125/pexels-photo.jpg
-32,Remote Car,"Rechargeable RC car, 20km/h top speed",1999,https://images.pexels.com/photos/19090/pexels-photo.jpg
-33,Doll Playset,"Fashion doll with accessories, fun for kids",899,https://images.pexels.com/photos/36029/pexels-photo.jpg
-34,Puzzle Game,"1000-piece jigsaw puzzle, family game",599,https://images.pexels.com/photos/226383/pexels-photo.jpg
-35,Toy Train,"Electric toy train with track, battery operated",1499,https://images.pexels.com/photos/258191/pexels-photo.jpg
-36,Backpack 30L,"Durable backpack, laptop compartment, multiple pockets",1999,https://images.pexels.com/photos/414444/pexels-photo.jpg
-37,Handbag Classic,"Elegant leather handbag, medium size, formal & casual",2499,https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg
-38,Sunglasses UV400,"Stylish sunglasses, 100% UV protection",1299,https://images.pexels.com/photos/46710/pexels-photo.jpg
-39,Leather Belt,"Premium leather, adjustable buckle, classic design",899,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
-40,Travel Mug,"Stainless steel insulated mug, keeps drinks hot/cold",699,https://images.pexels.com/photos/3727306/pexels-photo.jpg
+product_id,name,category,description,price_inr,image_url
+1,Smart Casual Dress,Dress,"- Material: Cotton Blend
+- Color: Blue
+- Size: M/L/XL
+- Style: Casual
+- Care: Machine washable",1299,https://images.pexels.com/photos/1192605/pexels-photo-1192605.jpeg
+2,Summer T-Shirt,Clothing,"- Material: Cotton
+- Color: White
+- Size: S/M/L/XL
+- Style: Casual
+- Care: Machine washable",799,https://images.pexels.com/photos/1005413/pexels-photo-1005413.jpeg
+3,Cotton Hoodie,Clothing,"- Material: Cotton
+- Color: Grey
+- Size: S/M/L
+- Style: Casual
+- Care: Machine washable",1499,https://images.pexels.com/photos/100741/pexels-photo.jpg
+4,Party Gown,Dress,"- Material: Satin
+- Color: Red
+- Size: M/L
+- Style: Evening Wear
+- Care: Dry clean only",2999,https://images.pexels.com/photos/1336160/pexels-photo-1336160.jpeg
+5,Winter Jacket,Clothing,"- Material: Polyester
+- Color: Black
+- Size: M/L/XL
+- Style: Casual/Outdoor
+- Insulation: Warm",2499,https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg
+6,Denim Jeans,Clothing,"- Material: Denim
+- Color: Blue
+- Size: 28-36
+- Fit: Slim
+- Care: Machine washable",1999,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
+7,Formal Shirt,Clothing,"- Material: Cotton
+- Color: White
+- Size: M/L/XL
+- Style: Formal
+- Care: Machine washable",1199,https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg
+8,Polo T-Shirt,Clothing,"- Material: Cotton Blend
+- Color: Navy Blue
+- Size: S/M/L/XL
+- Style: Casual
+- Care: Machine washable",899,https://images.pexels.com/photos/1005413/pexels-photo-1005413.jpeg
+9,Summer Shorts,Clothing,"- Material: Cotton
+- Color: Khaki
+- Size: S/M/L
+- Style: Casual
+- Care: Machine washable",699,https://images.pexels.com/photos/1005413/pexels-photo-1005413.jpeg
+10,Casual Skirt,Dress,"- Material: Cotton
+- Color: Pink
+- Size: S/M/L
+- Style: Casual
+- Care: Machine washable",799,https://images.pexels.com/photos/1192605/pexels-photo-1192605.jpeg
+11,Summer Sneakers,Shoes,"- Material: Canvas
+- Color: White
+- Sizes: 6-10 US
+- Style: Casual/Sports
+- Comfort: Breathable",1999,https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg
+12,Running Shoes,Shoes,"- Material: Mesh
+- Color: Black
+- Sizes: 6-11 US
+- Style: Running
+- Comfort: Cushioned sole",2999,https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg
+13,Formal Leather Shoes,Shoes,"- Material: Genuine Leather
+- Color: Brown
+- Sizes: 7-10 US
+- Style: Formal
+- Care: Polish regularly",3999,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
+14,Sandals,Shoes,"- Material: Synthetic
+- Color: Tan
+- Sizes: 6-11 US
+- Style: Casual
+- Comfort: Lightweight",999,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
+15,Boots,Shoes,"- Material: Leather
+- Color: Black
+- Sizes: 7-12 US
+- Style: Casual/Outdoor
+- Comfort: Cushioned insole",3499,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
+16,Flip Flops,Shoes,"- Material: Rubber
+- Color: Blue
+- Sizes: 6-11 US
+- Style: Casual
+- Comfort: Lightweight",499,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
+17,Sports Shoes,Shoes,"- Material: Mesh
+- Color: Grey
+- Sizes: 6-11 US
+- Style: Sports/Training
+- Comfort: Breathable",2599,https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg
+18,Canvas Shoes,Shoes,"- Material: Canvas
+- Color: Navy
+- Sizes: 6-10 US
+- Style: Casual
+- Comfort: Lightweight",1499,https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg
+19,Loafers,Shoes,"- Material: Leather
+- Color: Brown
+- Sizes: 7-10 US
+- Style: Formal/Casual
+- Comfort: Cushioned sole",1999,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
+20,High Heels,Shoes,"- Material: Synthetic
+- Color: Red
+- Sizes: 6-9 US
+- Style: Party/Formal
+- Comfort: Cushioned insole",2499,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
+21,Wireless Earbuds,Electronics,"- Connectivity: Bluetooth 5.0
+- Battery: 20 hours
+- Noise Cancellation: Yes
+- Warranty: 1 year
+- Color: Black",2499,https://images.pexels.com/photos/3394651/pexels-photo.jpg
+22,Smartwatch,Electronics,"- Display: Touchscreen
+- Battery: 2 days
+- GPS: Yes
+- Waterproof: 5ATM
+- Color: Black",3999,https://images.pexels.com/photos/277406/pexels-photo.jpg
+23,Tablet,Electronics,"- Screen: 10.5 inch
+- Storage: 128GB
+- RAM: 4GB
+- Connectivity: WiFi
+- Color: Silver",15999,https://images.pexels.com/photos/5082575/pexels-photo-5082575.jpeg
+24,Smartphone,Electronics,"- Screen: 6.5 inch OLED
+- Storage: 128GB
+- RAM: 6GB
+- Camera: 48MP
+- Color: Black",19999,https://images.pexels.com/photos/6078121/pexels-photo.jpg
+25,Bluetooth Speaker,Electronics,"- Connectivity: Bluetooth 5.0
+- Battery: 10 hours
+- Waterproof: IPX5
+- Color: Black
+- Sound: Stereo",2999,https://images.pexels.com/photos/63703/pexels-photo-63703.jpeg
+26,Laptop,Electronics,"- Screen: 14 inch
+- RAM: 8GB
+- Storage: 512GB SSD
+- Processor: Intel i5
+- Color: Grey",49999,https://images.pexels.com/photos/18105/pexels-photo.jpg
+27,Power Bank,Electronics,"- Capacity: 20000mAh
+- Output: 2.4A
+- Ports: 2 USB
+- Color: Black
+- Warranty: 1 year",1299,https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg
+28,Portable Projector,Electronics,"- Resolution: 1080p
+- Connectivity: HDMI, USB
+- Brightness: 2000 lumens
+- Color: White
+- Ideal for: Movies/Presentations",7499,https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg
+29,Keyboard,Electronics,"- Type: Mechanical
+- Connectivity: USB/Wireless
+- Keys: 104
+- Color: Black
+- Warranty: 1 year",1999,https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg
+30,Mouse,Electronics,"- Type: Optical
+- Connectivity: Wireless
+- DPI: 1600
+- Color: Black
+- Battery: 1 year",999,https://images.pexels.com/photos/1581316/pexels-photo-1581316.jpeg
+31,Leather Handbag,Bags,"- Material: Genuine Leather
+- Color: Brown
+- Compartments: 3 main pockets
+- Strap: Adjustable
+- Style: Formal/Casual",2799,https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg
+32,Backpack,Bags,"- Material: Polyester
+- Color: Black
+- Compartments: Laptop + 3 pockets
+- Straps: Adjustable
+- Ideal for: Travel/College",1999,https://images.pexels.com/photos/414444/pexels-photo.jpg
+33,Wallet,Bags,"- Material: Leather
+- Color: Brown
+- Compartments: 4 card slots
+- Size: Compact
+- Style: Casual/Formal",799,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
+34,Sunglasses,Accessories,"- Type: UV Protection
+- Lens: Polarized
+- Frame: Plastic
+- Color: Black
+- Style: Casual/Outdoor",1299,https://images.pexels.com/photos/46710/pexels-photo.jpg
+35,Belt,Accessories,"- Material: Leather
+- Color: Black
+- Length: 120cm adjustable
+- Style: Formal/Casual
+- Buckle: Metal",899,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
+36,Travel Bag,Bags,"- Material: Nylon
+- Color: Blue
+- Capacity: 40L
+- Compartments: 3
+- Ideal for: Travel",2499,https://images.pexels.com/photos/414444/pexels-photo.jpg
+37,Laptop Sleeve,Bags,"- Material: Neoprene
+- Color: Grey
+- Size: 15 inch
+- Protection: Shockproof
+- Style: Minimal",799,https://images.pexels.com/photos/414444/pexels-photo.jpg
+38,Crossbody Bag,Bags,"- Material: PU Leather
+- Color: Tan
+- Compartments: 2
+- Strap: Adjustable
+- Style: Casual",1499,https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg
+39,Cricket Bat,Sports,"- Material: English Willow
+- Weight: 1.2kg
+- Grip: Cushioned
+- Size: Standard
+- Recommended for: Intermediate/Professional",4999,https://images.pexels.com/photos/3991872/pexels-photo.jpg
+40,Football,Sports,"- Size: 5
+- Material: Synthetic
+- Color: White/Black
+- Recommended for: Outdoor/Indoor
+- Durable: Yes",1499,https://images.pexels.com/photos/274422/pexels-photo.jpg
+41,Yoga Mat,Sports,"- Material: Non-slip PVC
+- Thickness: 6mm
+- Color: Purple
+- Size: 183cm x 61cm
+- Ideal for: Yoga and Pilates",999,https://images.pexels.com/photos/3823039/pexels-photo.jpg
+42,Tennis Racket,Sports,"- Material: Aluminum
+- Weight: 300g
+- Grip: Cushioned
+- String: Nylon
+- Recommended for: Beginners/Intermediate",3499,https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg
+43,Badminton Shuttle Pack,Sports,"- Quantity: 12
+- Material: Nylon
+- Speed: Standard
+- Color: White
+- Ideal for: Training/Practice",499,https://images.pexels.com/photos/365385/pexels-photo.jpg
+44,Dumbbell Set,Sports,"- Weight: 5kg each
+- Material: Cast Iron
+- Grip: Rubber coated
+- Color: Black
+- Ideal for: Home Gym",1999,https://images.pexels.com/photos/416754/pexels-photo-416754.jpeg
+45,Novel - The Journey,Books,"- Genre: Fiction
+- Pages: 300
+- Language: English
+- Publisher: ABC Publications
+- Recommended Age: 16+",499,https://images.pexels.com/photos/46274/pexels-photo.jpg
+46,Science Basics,Books,"- Genre: Educational
+- Pages: 250
+- Language: English
+- Illustrations: Yes
+- Publisher: EduBooks",799,https://images.pexels.com/photos/256559/pexels-photo.jpg
+47,History of India,Books,"- Genre: History
+- Pages: 400
+- Language: English
+- Illustrations: Maps
+- Publisher: Heritage Books",999,https://images.pexels.com/photos/256541/pexels-photo.jpg
+48,Cooking Made Easy,Books,"- Genre: Cooking
+- Recipes: 200+
+- Language: English
+- Illustrations: Yes
+- Publisher: FoodBooks",699,https://images.pexels.com/photos/1415555/pexels-photo.jpg
+49,Kids Storybook,Books,"- Genre: Children
+- Pages: 50
+- Language: English
+- Illustrations: Colorful
+- Recommended Age: 5-10",399,https://images.pexels.com/photos/256546/pexels-photo.jpg
+50,Travel Mug,Misc,"- Material: Stainless Steel
+- Capacity: 350ml
+- Insulated: Hot & Cold
+- Color: Silver
+- Leakproof: Yes",699,https://images.pexels.com/photos/3727306/pexels-photo.jpg
