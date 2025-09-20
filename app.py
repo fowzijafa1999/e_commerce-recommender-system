@@ -1,78 +1,66 @@
 import streamlit as st
 import pandas as pd
-from recommender import ContentRecommender  # Use the upgraded content-based recommender
+from recommender import ContentRecommender
 
 st.set_page_config(page_title="🛍 Product Recommender", layout="wide")
 st.title("🛒 Simple Content-Based Product Recommender")
 
-# -------------------- Load Data & Recommender --------------------
+# -------------------- Load Data --------------------
 rec = ContentRecommender("products.csv")
 df = rec.df
 
-# -------------------- Top Filter Bar --------------------
-st.markdown("### 🔍 Find Your Product")
-col1, col2, col3 = st.columns([2, 2, 2])
-
-with col1:
-    search_query = st.text_input("Search", placeholder="Type product name...")
-
-with col2:
-    categories = ["All", "Electronics", "Fashion", "Home & Kitchen", "Sports", "Beauty", "Books", "Toys"]
-    category = st.selectbox("Category", categories)
-
-with col3:
-    min_price, max_price = int(df['price_inr'].min()), int(df['price_inr'].max())
-    price_range = st.slider("Price (₹)", min_price, max_price, (min_price, max_price))
-
-# -------------------- Apply Filters --------------------
-filtered = df.copy()
-
-# Search filter
-if search_query:
-    filtered = filtered[filtered['name'].str.contains(search_query, case=False)]
-
-# Price filter
-filtered = filtered[(filtered['price_inr'] >= price_range[0]) & (filtered['price_inr'] <= price_range[1])]
+# -------------------- Sidebar Filters --------------------
+st.sidebar.header("Filter Options")
 
 # Category filter
-if category != "All":
-    filtered = filtered[
-        filtered['description'].str.contains(category, case=False) |
-        filtered['name'].str.contains(category, case=False)
-    ]
+categories = ["All"] + sorted(df['category'].unique())
+selected_category = st.sidebar.selectbox("Category", categories)
 
-st.markdown(f"✅ {len(filtered)} products found")
+# Search filter
+search_query = st.sidebar.text_input("Search product", "")
+
+# Apply filters
+filtered = df.copy()
+if selected_category != "All":
+    filtered = filtered[filtered['category'] == selected_category]
+
+if search_query:
+    filtered = filtered[filtered['name'].str.contains(search_query, case=False, na=False)]
 
 # -------------------- Product Selection --------------------
-if len(filtered) > 0:
+if len(filtered) == 0:
+    st.warning("No products found with your filters/search.")
+else:
     product_id = st.selectbox(
         "Choose a product",
         filtered['product_id'].tolist(),
         format_func=lambda x: filtered[filtered['product_id'] == x]['name'].values[0]
     )
 
-    top_n = st.slider("How many recommendations?", 1, 8, 4)
-
     selected = df[df['product_id'] == product_id].iloc[0]
+
+    # Display selected product
     st.markdown(f"### 🎯 {selected['name']}")
-    cols = st.columns([1, 2])
-    with cols[0]:
-        st.image(selected['image_url'], width=240)
-    with cols[1]:
-        st.write(selected['description'])
+    col1, col2 = st.columns([1,2])
+    with col1:
+        st.image(selected['image_url'], width=250)
+    with col2:
+        for line in str(selected['description']).split("\n"):
+            st.write(line)
         st.markdown(f"**Price:** ₹{selected['price_inr']}")
+        st.markdown(f"**Category:** {selected['category']}")
 
     # -------------------- Recommendations --------------------
-    if st.button("Show Recommendations"):
-        recs = rec.recommend_by_id(product_id, top_n=top_n)
-        st.markdown("## 🤝 Recommended Products")
-        cols = st.columns(2)
-        for i, row in recs.iterrows():
-            c = cols[i % 2]
-            with c:
-                st.image(row['image_url'], width=160)
-                st.markdown(f"**{row['name']}**")
-                st.write(f"₹{row['price_inr']}")
-                st.write(row['description'])
-                st.markdown("---")
-
+    st.markdown("---")
+    st.markdown("## 🤝 Recommended Products")
+    recs = rec.recommend_by_id(product_id, top_n=4)
+    cols = st.columns(2)
+    for i, row in recs.iterrows():
+        with cols[i % 2]:
+            st.image(row['image_url'], width=180)
+            st.markdown(f"**{row['name']}**")
+            st.write(f"₹{row['price_inr']}")
+            for line in str(row['description']).split("\n"):
+                st.write(line)
+            st.markdown(f"**Category:** {row['category']}")
+            st.markdown("---")
