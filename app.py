@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from recommender import SimpleRecommender
-
 st.set_page_config(page_title="🛍 Product Recommender", layout="wide")
 st.title("🛒 Product Recommendation System")
 
@@ -37,3 +36,4 @@ if st.button("🔍 Show Recommendations"):
             st.write(f"₹{row['price_inr']}")
             st.write(row['description'])
             st.markdown("---")
+
