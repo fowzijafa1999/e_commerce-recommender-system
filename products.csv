@@ -1,36 +1,64 @@
-product_id,name,description,price_inr,image_url
-1,Running Shoes,Lightweight sports running shoes with breathable mesh upper.,4299,https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg
-2,Leather Sandals,"Genuine leather open sandals, perfect for summers.",2499,https://images.pexels.com/photos/19090/pexels-photo.jpg
-3,Formal Leather Shoes,"Polished office shoes, classic design.",5999,https://images.pexels.com/photos/267320/pexels-photo.jpg
-4,Hiking Boots,Durable boots for trekking and outdoor adventures.,4999,https://images.pexels.com/photos/6332/hiking-boots.jpg
-5,Sports Sneakers,Trendy sneakers for casual and sports use.,3799,https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg
-6,Cotton T-Shirt,"Regular fit cotton t-shirt, suitable for casual wear.",799,https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg
-7,Hoodie,Fleece hoodie with front pocket and warm lining.,1899,https://images.pexels.com/photos/100741/pexels-photo.jpg
-8,Denim Jeans,Slim fit blue denim jeans.,2199,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
-9,Jacket,Stylish winter jacket with zipper.,3599,https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg
-10,Sports T-Shirt,Breathable polyester sports t-shirt.,1199,https://images.pexels.com/photos/936088/pexels-photo-936088.jpeg
-11,Wrist Watch,Stainless steel analog wrist watch.,3799,https://images.pexels.com/photos/190819/pexels-photo.jpg
-12,Sunglasses,UV-protected sunglasses for men and women.,1499,https://images.pexels.com/photos/46710/pexels-photo.jpg
-13,Leather Belt,High-quality leather belt with buckle.,999,https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg
-14,Backpack,"30-litre backpack, water resistant.",1499,https://images.pexels.com/photos/414444/pexels-photo.jpg
-15,Handbag,Stylish leather handbag for outings.,2499,https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg
-16,Smartphone,"6.5-inch display, 8 GB RAM, 128 GB storage smartphone.",14999,https://images.pexels.com/photos/6078121/pexels-photo.jpg
-17,Laptop,Lightweight laptop with fast SSD storage.,45999,https://images.pexels.com/photos/18105/pexels-photo.jpg
-18,Wireless Earbuds,Bluetooth earbuds with noise cancellation.,2999,https://images.pexels.com/photos/3394651/pexels-photo.jpg
-19,Smartwatch,Touchscreen smartwatch with fitness tracking.,4999,https://images.pexels.com/photos/277406/pexels-photo.jpg
-20,Tablet,Portable tablet with 10-inch display.,12999,https://images.pexels.com/photos/5082575/pexels-photo.jpg
-21,Microwave Oven,Compact microwave oven for home use.,6999,https://images.pexels.com/photos/3952232/pexels-photo.jpg
-22,Blender,Powerful blender for smoothies.,2499,https://images.pexels.com/photos/414837/pexels-photo.jpg
-23,Vacuum Cleaner,Lightweight vacuum cleaner with suction power.,5999,https://images.pexels.com/photos/3637729/pexels-photo.jpg
-24,Air Conditioner,Energy-efficient split AC.,29999,https://images.pexels.com/photos/5825371/pexels-photo.jpg
-25,Refrigerator,Double-door fridge with freezer.,32999,https://images.pexels.com/photos/373790/pexels-photo.jpg
-26,Novel,Best-selling contemporary fiction novel.,499,https://images.pexels.com/photos/46274/pexels-photo.jpg
-27,Science Book,Educational science and technology book.,899,https://images.pexels.com/photos/256559/pexels-photo.jpg
-28,History Book,Comprehensive history reference book.,799,https://images.pexels.com/photos/256541/pexels-photo.jpg
-29,Cookbook,Recipe book with step-by-step guides.,999,https://images.pexels.com/photos/1415555/pexels-photo.jpg
-30,Children's Storybook,Illustrated storybook for kids.,399,https://images.pexels.com/photos/256546/pexels-photo.jpg
-31,Perfume,Long-lasting premium fragrance.,1599,https://images.pexels.com/photos/965989/pexels-photo.jpg
-32,Shampoo,Herbal shampoo for healthy hair.,299,https://images.pexels.com/photos/3735631/pexels-photo.jpg
-33,Face Cream,Moisturizing daily face cream.,499,https://images.pexels.com/photos/3735632/pexels-photo.jpg
-34,Lipstick,Matte finish lipstick with rich color.,699,https://images.pexels.com/photos/2533266/pexels-photo.jpg
-35,Hair Dryer,Compact hair dryer with speed settings.,1299,https://images.pexels.com/photos/1620754/pexels-photo.jpg
+import pandas as pd
+
+products = [
+    # Electronics
+    (1, "Smartphone Pro X", "6.7-inch OLED display, 128GB storage, 12GB RAM.", 59999, 4.5, "https://images.pexels.com/photos/6078121/pexels-photo.jpg"),
+    (2, "Laptop UltraBook", "Lightweight laptop with 16GB RAM and 512GB SSD.", 74999, 4.7, "https://images.pexels.com/photos/18105/pexels-photo.jpg"),
+    (3, "Wireless Earbuds Max", "Noise-cancelling earbuds with 24hr battery.", 7999, 4.3, "https://images.pexels.com/photos/3394651/pexels-photo.jpg"),
+    (4, "Smartwatch Fit", "Fitness smartwatch with heart-rate and GPS.", 5999, 4.2, "https://images.pexels.com/photos/277406/pexels-photo.jpg"),
+    (5, "Tablet Go", "10.5-inch tablet with stylus support.", 18999, 4.1, "https://images.pexels.com/photos/5082575/pexels-photo.jpg"),
+
+    # Home & Kitchen
+    (6, "Microwave Oven", "900W microwave oven with grill function.", 8499, 4.0, "https://images.pexels.com/photos/3952232/pexels-photo.jpg"),
+    (7, "Blender Pro", "High-speed blender for smoothies and juices.", 2999, 4.4, "https://images.pexels.com/photos/414837/pexels-photo.jpg"),
+    (8, "Refrigerator CoolMax", "Double-door fridge with inverter compressor.", 35999, 4.6, "https://images.pexels.com/photos/373790/pexels-photo.jpg"),
+    (9, "Coffee Maker", "Automatic coffee machine with frother.", 5999, 4.3, "https://images.pexels.com/photos/302899/pexels-photo.jpg"),
+    (10, "Vacuum Cleaner", "Bagless vacuum cleaner with HEPA filter.", 6999, 4.1, "https://images.pexels.com/photos/3637729/pexels-photo.jpg"),
+
+    # Fashion
+    (11, "Denim Jeans", "Slim fit stretchable blue jeans.", 1999, 4.0, "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg"),
+    (12, "Leather Jacket", "Classic black biker leather jacket.", 5499, 4.5, "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg"),
+    (13, "Cotton Hoodie", "Soft cotton hoodie with kangaroo pocket.", 1499, 4.2, "https://images.pexels.com/photos/100741/pexels-photo.jpg"),
+    (14, "Sneakers White", "Casual white sneakers with rubber sole.", 2999, 4.3, "https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg"),
+    (15, "Wrist Watch", "Analog watch with leather strap.", 2599, 4.1, "https://images.pexels.com/photos/190819/pexels-photo.jpg"),
+
+    # Sports & Outdoor
+    (16, "Cricket Bat", "English willow professional cricket bat.", 4999, 4.6, "https://images.pexels.com/photos/3991872/pexels-photo.jpg"),
+    (17, "Football", "FIFA size-5 professional football.", 1499, 4.4, "https://images.pexels.com/photos/274422/pexels-photo.jpg"),
+    (18, "Yoga Mat", "Non-slip yoga mat with 6mm thickness.", 999, 4.2, "https://images.pexels.com/photos/3823039/pexels-photo.jpg"),
+    (19, "Tennis Racket", "Lightweight racket for beginners & pros.", 3499, 4.3, "https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg"),
+    (20, "Badminton Shuttle Pack", "Pack of 12 nylon shuttles.", 499, 4.0, "https://images.pexels.com/photos/365385/pexels-photo.jpg"),
+
+    # Beauty & Personal Care
+    (21, "Perfume Elegant", "Long-lasting floral fragrance.", 1599, 4.5, "https://images.pexels.com/photos/965989/pexels-photo.jpg"),
+    (22, "Herbal Shampoo", "Natural ingredients for strong hair.", 399, 4.1, "https://images.pexels.com/photos/3735631/pexels-photo.jpg"),
+    (23, "Face Cream", "Moisturizing daily use cream.", 599, 4.2, "https://images.pexels.com/photos/3735632/pexels-photo.jpg"),
+    (24, "Lipstick Matte", "Matte finish lipstick, 5 shades.", 699, 4.0, "https://images.pexels.com/photos/2533266/pexels-photo.jpg"),
+    (25, "Hair Dryer", "1200W hair dryer with 2 speed settings.", 1299, 4.3, "https://images.pexels.com/photos/1620754/pexels-photo.jpg"),
+
+    # Books
+    (26, "Novel - The Journey", "Bestselling contemporary fiction novel.", 499, 4.4, "https://images.pexels.com/photos/46274/pexels-photo.jpg"),
+    (27, "Science Basics", "Introductory guide to modern science.", 799, 4.1, "https://images.pexels.com/photos/256559/pexels-photo.jpg"),
+    (28, "History of India", "Comprehensive history reference book.", 999, 4.3, "https://images.pexels.com/photos/256541/pexels-photo.jpg"),
+    (29, "Cooking Made Easy", "Over 200 easy-to-follow recipes.", 699, 4.2, "https://images.pexels.com/photos/1415555/pexels-photo.jpg"),
+    (30, "Kids Storybook", "Illustrated storybook for children.", 399, 4.5, "https://images.pexels.com/photos/256546/pexels-photo.jpg"),
+
+    # Toys
+    (31, "LEGO Building Set", "Creative bricks set with 500 pieces.", 3499, 4.8, "https://images.pexels.com/photos/163125/pexels-photo.jpg"),
+    (32, "Remote Car", "Rechargeable remote-controlled car.", 1999, 4.3, "https://images.pexels.com/photos/19090/pexels-photo.jpg"),
+    (33, "Doll Playset", "Fashion doll with accessories.", 899, 4.1, "https://images.pexels.com/photos/36029/pexels-photo.jpg"),
+    (34, "Puzzle Game", "1000-piece jigsaw puzzle.", 599, 4.2, "https://images.pexels.com/photos/226383/pexels-photo.jpg"),
+    (35, "Toy Train", "Electric toy train with tracks.", 1499, 4.0, "https://images.pexels.com/photos/258191/pexels-photo.jpg"),
+
+    # Miscellaneous
+    (36, "Backpack 30L", "Durable backpack with laptop compartment.", 1999, 4.4, "https://images.pexels.com/photos/414444/pexels-photo.jpg"),
+    (37, "Handbag Classic", "Elegant leather handbag.", 2499, 4.5, "https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg"),
+    (38, "Sunglasses UV400", "Stylish sunglasses with UV protection.", 1299, 4.2, "https://images.pexels.com/photos/46710/pexels-photo.jpg"),
+    (39, "Leather Belt", "Premium leather belt with buckle.", 899, 4.0, "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg"),
+    (40, "Travel Mug", "Insulated stainless steel travel mug.", 699, 4.3, "https://images.pexels.com/photos/3727306/pexels-photo.jpg"),
+]
+
+df = pd.DataFrame(products, columns=["product_id","name","description","price_inr","rating","image_url"])
+df.to_csv("products.csv", index=False)
+print("✅ Saved products.csv with", len(df), "products")
+df.head()
