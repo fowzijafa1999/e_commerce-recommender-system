@@ -1,42 +1,78 @@
-| product\_id | name                   | description                                                           | price\_inr | image\_url                                                                                                                               |
-| ----------- | ---------------------- | --------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 1           | Smartphone Pro X       | 6.7-inch OLED display, 128GB storage, fast processor, high-res camera | 59999      | [https://images.pexels.com/photos/6078121/pexels-photo.jpg](https://images.pexels.com/photos/6078121/pexels-photo.jpg)                   |
-| 2           | Laptop UltraBook       | Lightweight laptop, 16GB RAM, 512GB SSD, long battery life            | 74999      | [https://images.pexels.com/photos/18105/pexels-photo.jpg](https://images.pexels.com/photos/18105/pexels-photo.jpg)                       |
-| 3           | Wireless Earbuds Max   | Noise-cancelling earbuds, 24hr battery, Bluetooth 5.0                 | 7999       | [https://images.pexels.com/photos/3394651/pexels-photo.jpg](https://images.pexels.com/photos/3394651/pexels-photo.jpg)                   |
-| 4           | Smartwatch Fit         | Fitness smartwatch, heart-rate monitor, GPS tracking                  | 5999       | [https://images.pexels.com/photos/277406/pexels-photo.jpg](https://images.pexels.com/photos/277406/pexels-photo.jpg)                     |
-| 5           | Tablet Go              | 10.5-inch tablet, stylus support, lightweight design                  | 18999      | [https://images.pexels.com/photos/5082575/pexels-photo.jpg](https://images.pexels.com/photos/5082575/pexels-photo.jpg)                   |
-| 6           | Microwave Oven         | 900W microwave with grill, easy-to-clean interior                     | 8499       | [https://images.pexels.com/photos/3952232/pexels-photo.jpg](https://images.pexels.com/photos/3952232/pexels-photo.jpg)                   |
-| 7           | Blender Pro            | High-speed blender for smoothies, juices, and soups                   | 2999       | [https://images.pexels.com/photos/414837/pexels-photo.jpg](https://images.pexels.com/photos/414837/pexels-photo.jpg)                     |
-| 8           | Refrigerator CoolMax   | Double-door fridge, inverter compressor, large storage                | 35999      | [https://images.pexels.com/photos/373790/pexels-photo.jpg](https://images.pexels.com/photos/373790/pexels-photo.jpg)                     |
-| 9           | Coffee Maker           | Automatic coffee machine with milk frother                            | 5999       | [https://images.pexels.com/photos/302899/pexels-photo.jpg](https://images.pexels.com/photos/302899/pexels-photo.jpg)                     |
-| 10          | Vacuum Cleaner         | Bagless vacuum, HEPA filter, lightweight                              | 6999       | [https://images.pexels.com/photos/3637729/pexels-photo.jpg](https://images.pexels.com/photos/3637729/pexels-photo.jpg)                   |
-| 11          | Denim Jeans            | Slim fit blue denim jeans, stretchable fabric                         | 1999       | [https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg](https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg)     |
-| 12          | Leather Jacket         | Black biker leather jacket, stylish and warm                          | 5499       | [https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg](https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg)     |
-| 13          | Cotton Hoodie          | Soft cotton hoodie, kangaroo pocket, casual wear                      | 1499       | [https://images.pexels.com/photos/100741/pexels-photo.jpg](https://images.pexels.com/photos/100741/pexels-photo.jpg)                     |
-| 14          | Sneakers White         | Casual white sneakers, rubber sole, lightweight                       | 2999       | [https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg](https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg) |
-| 15          | Wrist Watch            | Analog watch with leather strap, classic design                       | 2599       | [https://images.pexels.com/photos/190819/pexels-photo.jpg](https://images.pexels.com/photos/190819/pexels-photo.jpg)                     |
-| 16          | Cricket Bat            | English willow bat, professional grade, lightweight                   | 4999       | [https://images.pexels.com/photos/3991872/pexels-photo.jpg](https://images.pexels.com/photos/3991872/pexels-photo.jpg)                   |
-| 17          | Football               | FIFA size-5, durable synthetic material, professional                 | 1499       | [https://images.pexels.com/photos/274422/pexels-photo.jpg](https://images.pexels.com/photos/274422/pexels-photo.jpg)                     |
-| 18          | Yoga Mat               | Non-slip mat, 6mm thick, ideal for home or gym                        | 999        | [https://images.pexels.com/photos/3823039/pexels-photo.jpg](https://images.pexels.com/photos/3823039/pexels-photo.jpg)                   |
-| 19          | Tennis Racket          | Lightweight racket for beginners and pros, durable                    | 3499       | [https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg](https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg)     |
-| 20          | Badminton Shuttle Pack | Pack of 12 nylon shuttles, standard speed                             | 499        | [https://images.pexels.com/photos/365385/pexels-photo.jpg](https://images.pexels.com/photos/365385/pexels-photo.jpg)                     |
-| 21          | Perfume Elegant        | Long-lasting floral fragrance, ideal for day/night                    | 1599       | [https://images.pexels.com/photos/965989/pexels-photo.jpg](https://images.pexels.com/photos/965989/pexels-photo.jpg)                     |
-| 22          | Herbal Shampoo         | Natural ingredients, strengthens hair, daily use                      | 399        | [https://images.pexels.com/photos/3735631/pexels-photo.jpg](https://images.pexels.com/photos/3735631/pexels-photo.jpg)                   |
-| 23          | Face Cream             | Moisturizing daily cream, lightweight, suitable for all skin          | 599        | [https://images.pexels.com/photos/3735632/pexels-photo.jpg](https://images.pexels.com/photos/3735632/pexels-photo.jpg)                   |
-| 24          | Lipstick Matte         | Matte finish, 5 vibrant shades, smooth application                    | 699        | [https://images.pexels.com/photos/2533266/pexels-photo.jpg](https://images.pexels.com/photos/2533266/pexels-photo.jpg)                   |
-| 25          | Hair Dryer             | 1200W hair dryer, 2 speed settings, compact design                    | 1299       | [https://images.pexels.com/photos/1620754/pexels-photo.jpg](https://images.pexels.com/photos/1620754/pexels-photo.jpg)                   |
-| 26          | Novel - The Journey    | Bestselling contemporary fiction, 300 pages                           | 499        | [https://images.pexels.com/photos/46274/pexels-photo.jpg](https://images.pexels.com/photos/46274/pexels-photo.jpg)                       |
-| 27          | Science Basics         | Introductory guide to modern science, illustrated                     | 799        | [https://images.pexels.com/photos/256559/pexels-photo.jpg](https://images.pexels.com/photos/256559/pexels-photo.jpg)                     |
-| 28          | History of India       | Comprehensive history, maps, and illustrations                        | 999        | [https://images.pexels.com/photos/256541/pexels-photo.jpg](https://images.pexels.com/photos/256541/pexels-photo.jpg)                     |
-| 29          | Cooking Made Easy      | 200+ simple recipes for home cooking                                  | 699        | [https://images.pexels.com/photos/1415555/pexels-photo.jpg](https://images.pexels.com/photos/1415555/pexels-photo.jpg)                   |
-| 30          | Kids Storybook         | Illustrated storybook for children aged 5-10                          | 399        | [https://images.pexels.com/photos/256546/pexels-photo.jpg](https://images.pexels.com/photos/256546/pexels-photo.jpg)                     |
-| 31          | LEGO Building Set      | 500-piece creative bricks, build models & shapes                      | 3499       | [https://images.pexels.com/photos/163125/pexels-photo.jpg](https://images.pexels.com/photos/163125/pexels-photo.jpg)                     |
-| 32          | Remote Car             | Rechargeable RC car, 20km/h top speed                                 | 1999       | [https://images.pexels.com/photos/19090/pexels-photo.jpg](https://images.pexels.com/photos/19090/pexels-photo.jpg)                       |
-| 33          | Doll Playset           | Fashion doll with accessories, fun for kids                           | 899        | [https://images.pexels.com/photos/36029/pexels-photo.jpg](https://images.pexels.com/photos/36029/pexels-photo.jpg)                       |
-| 34          | Puzzle Game            | 1000-piece jigsaw puzzle, family game                                 | 599        | [https://images.pexels.com/photos/226383/pexels-photo.jpg](https://images.pexels.com/photos/226383/pexels-photo.jpg)                     |
-| 35          | Toy Train              | Electric toy train with track, battery operated                       | 1499       | [https://images.pexels.com/photos/258191/pexels-photo.jpg](https://images.pexels.com/photos/258191/pexels-photo.jpg)                     |
-| 36          | Backpack 30L           | Durable backpack, laptop compartment, multiple pockets                | 1999       | [https://images.pexels.com/photos/414444/pexels-photo.jpg](https://images.pexels.com/photos/414444/pexels-photo.jpg)                     |
-| 37          | Handbag Classic        | Elegant leather handbag, medium size, formal & casual                 | 2499       | [https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg](https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg) |
-| 38          | Sunglasses UV400       | Stylish sunglasses, 100% UV protection                                | 1299       | [https://images.pexels.com/photos/46710/pexels-photo.jpg](https://images.pexels.com/photos/46710/pexels-photo.jpg)                       |
-| 39          | Leather Belt           | Premium leather, adjustable buckle, classic design                    | 899        | [https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg](https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg)     |
-| 40          | Travel Mug             | Stainless steel insulated mug, keeps drinks hot/cold                  | 699        | [https://images.pexels.com/photos/3727306/pexels-photo.jpg](https://images.pexels.com/photos/3727306/pexels-photo.jpg)                   |
+import streamlit as st
+import pandas as pd
+from recommender import ContentRecommender  # Use the upgraded content-based recommender
+
+st.set_page_config(page_title="🛍 Product Recommender", layout="wide")
+st.title("🛒 Simple Content-Based Product Recommender")
+
+# -------------------- Load Data & Recommender --------------------
+rec = ContentRecommender("products.csv")
+df = rec.df
+
+# -------------------- Top Filter Bar --------------------
+st.markdown("### 🔍 Find Your Product")
+col1, col2, col3 = st.columns([2, 2, 2])
+
+with col1:
+    search_query = st.text_input("Search", placeholder="Type product name...")
+
+with col2:
+    categories = ["All", "Electronics", "Fashion", "Home & Kitchen", "Sports", "Beauty", "Books", "Toys"]
+    category = st.selectbox("Category", categories)
+
+with col3:
+    min_price, max_price = int(df['price_inr'].min()), int(df['price_inr'].max())
+    price_range = st.slider("Price (₹)", min_price, max_price, (min_price, max_price))
+
+# -------------------- Apply Filters --------------------
+filtered = df.copy()
+
+# Search filter
+if search_query:
+    filtered = filtered[filtered['name'].str.contains(search_query, case=False)]
+
+# Price filter
+filtered = filtered[(filtered['price_inr'] >= price_range[0]) & (filtered['price_inr'] <= price_range[1])]
+
+# Category filter
+if category != "All":
+    filtered = filtered[
+        filtered['description'].str.contains(category, case=False) |
+        filtered['name'].str.contains(category, case=False)
+    ]
+
+st.markdown(f"✅ {len(filtered)} products found")
+
+# -------------------- Product Selection --------------------
+if len(filtered) > 0:
+    product_id = st.selectbox(
+        "Choose a product",
+        filtered['product_id'].tolist(),
+        format_func=lambda x: filtered[filtered['product_id'] == x]['name'].values[0]
+    )
+
+    top_n = st.slider("How many recommendations?", 1, 8, 4)
+
+    selected = df[df['product_id'] == product_id].iloc[0]
+    st.markdown(f"### 🎯 {selected['name']}")
+    cols = st.columns([1, 2])
+    with cols[0]:
+        st.image(selected['image_url'], width=240)
+    with cols[1]:
+        st.write(selected['description'])
+        st.markdown(f"**Price:** ₹{selected['price_inr']}")
+
+    # -------------------- Recommendations --------------------
+    if st.button("Show Recommendations"):
+        recs = rec.recommend_by_id(product_id, top_n=top_n)
+        st.markdown("## 🤝 Recommended Products")
+        cols = st.columns(2)
+        for i, row in recs.iterrows():
+            c = cols[i % 2]
+            with c:
+                st.image(row['image_url'], width=160)
+                st.markdown(f"**{row['name']}**")
+                st.write(f"₹{row['price_inr']}")
+                st.write(row['description'])
+                st.markdown("---")
+
